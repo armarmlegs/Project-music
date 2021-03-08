@@ -2,7 +2,7 @@ const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const multer = require("multer");
 
-// giving access to your cloudinary account
+// giving access to your cloudinary account (maud's cloud)
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
   api_key: process.env.CLOUDINARY_KEY,
@@ -19,8 +19,9 @@ const storage = new CloudinaryStorage({
   },
 });
 
+//coucou
 
-
-const uploadCloud = multer({ storage });
+const fileUploader = multer({ storage });
 // a middleware designed to parse file from requests and associate to req.file
-module.exports = uploadCloud;
+module.exports = fileUploader;
+
