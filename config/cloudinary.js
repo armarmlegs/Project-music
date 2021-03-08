@@ -11,9 +11,16 @@ cloudinary.config({
 
 // cloudinary : SAAS platform : specialized in images hosting (tools : metadata, image analyzing ...)
 const storage = new CloudinaryStorage({
-  cloudinary: cloudinary
+  cloudinary: cloudinary,
+  folder: ['albums covers', 'logos'],
+  allowedFormats: ['jpeg', 'png' ],
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  },
 });
 
-const fileUploader = multer({ storage });
+
+
+const uploadCloud = multer({ storage });
 // a middleware designed to parse file from requests and associate to req.file
-module.exports = fileUploader;
+module.exports = uploadCloud;
