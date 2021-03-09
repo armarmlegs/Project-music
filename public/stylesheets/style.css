@@ -1,8 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Faster+One|Oswald:300,400,500,700|Source+Sans+Pro:300,400,600,700&display=swap");
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.big-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: flex-start;
+  /* border: 1px solid black; */
+
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+}
+
+.flexed-item {
+  display: flex;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.msg {
+  padding: 10px 20px;
+}
+
+.msg.error {
+  color: #802b31;
+  background: #f8d6da;
+  box-shadow: -0.3px 0.1px 2.4px 0.1px #802b31;
+}
+
+.msg.success {
+  color: #216136;
+  background: #d4edda;
+  box-shadow: -0.3px 0.1px 2.4px 0.1px #216136;
+}
+
+.msg.warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.header {
+  width: 100%;
+}
+
+.nav-link {
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-wrapper {
+  border-bottom: 1px solid rgb(212, 212, 212);
+  height: 53px;
+  padding: 0 1.2rem;
+}
+
+.nav-logo {
+  margin-right: 3.5rem;
+}
+
+h2.logo-item {
+  font-size: 2rem;
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  transition: all 0.2s ease-in;
+  transition-property: box-shadow;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item:hover {
+  box-shadow: inset 0 -3px 0 0 #111;
+}
+
+.nav-item-admin {
+  color: rgb(52, 52, 255);
+  transition: all 0.2s ease-in;
+  transition-property: box-shadow;
+}
+
+.nav-item-admin:hover {
+  box-shadow: inset 0 -3px 0 0 rgb(52, 52, 255);
+}
+
+.nav-item a {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.nav-end {
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-end-item:first-child {
+  margin-right: 1.2rem;
+}
+
+.supercont{
+  border: 1px solid black;
+  color: white;
+  padding-bottom: 600px;
+  background-image: url("./../images/vinyl2.jpg");
+  background-size: cover;
 }

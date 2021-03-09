@@ -36,9 +36,11 @@ app.use(
     resave: true
   })
 );
+//Middlewares party
 
 app.use(flash());
-
+app.use(require("./middlewares/exploseFlashMessage"));
+app.use(require("./middlewares/exposeLoginStatus"));
 
 
 //Connect Routers
