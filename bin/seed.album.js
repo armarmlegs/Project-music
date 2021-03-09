@@ -12,10 +12,11 @@ const albums = [
     artist: null,
     cover:
       "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615215216/albums%20covers/august-cover_z3sml5.jpg",
-    otherCovers: 
-    ["https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314369/home%20photos/a3_vtxxad.jpg", 
-    "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314356/home%20photos/a2_gzbetn.jpg",
-    "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314350/home%20photos/a1_x0xs0a.jpg"]
+    otherCovers: [
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314369/home%20photos/a3_vtxxad.jpg",
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314356/home%20photos/a2_gzbetn.jpg",
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314350/home%20photos/a1_x0xs0a.jpg",
+    ],
   },
   {
     title: "wu tang forever",
@@ -23,10 +24,10 @@ const albums = [
     artist: null,
     cover:
       "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615217191/albums%20covers/wutang-cover_kycjgo.jpg",
-    otherCovers:
-    ["https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314209/home%20photos/w2_g5wwew.jpg",
-    "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314203/home%20photos/w1_sfssmv.jpg"]
-
+    otherCovers: [
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314209/home%20photos/w2_g5wwew.jpg",
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314203/home%20photos/w1_sfssmv.jpg",
+    ],
   },
   {
     title: "wasting lights",
@@ -34,9 +35,10 @@ const albums = [
     artist: null,
     cover:
       "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615217251/albums%20covers/wastinglights-cover_kbln8z.jpg",
-      otherCovers:
-      ["https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313497/home%20photos/f3-home_gbrmhk.jpg",
-      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313489/home%20photos/f2-home_hugcph.jpg"]
+    otherCovers: [
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313497/home%20photos/f3-home_gbrmhk.jpg",
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313489/home%20photos/f2-home_hugcph.jpg",
+    ],
   },
   {
     title: "era vulgaris",
@@ -44,10 +46,11 @@ const albums = [
     artist: null,
     cover:
       "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615217473/albums%20covers/eravulgaris-cover_tveaug.jpg",
-      otherCovers: [
-        "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313716/home%20photos/q3_lhtji1.jpg",
-        "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313705/home%20photos/q2_n4tfti.png",
-        "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313695/home%20photos/q1_bv8au3.jpg"]
+    otherCovers: [
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313716/home%20photos/q3_lhtji1.jpg",
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313705/home%20photos/q2_n4tfti.png",
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313695/home%20photos/q1_bv8au3.jpg",
+    ],
   },
   {
     title: "rage against the machine",
@@ -55,9 +58,10 @@ const albums = [
     artist: null,
     cover:
       "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615217558/albums%20covers/rageagainst-cover_olir3g.jpg",
-      otherCovers: [
-        "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313907/home%20photos/r1_dul5zx.jpg",
-        "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313929/home%20photos/r3._srynxa.jpg"]
+    otherCovers: [
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313907/home%20photos/r1_dul5zx.jpg",
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615313929/home%20photos/r3._srynxa.jpg",
+    ],
   },
   {
     title: "white pony",
@@ -65,10 +69,10 @@ const albums = [
     artist: null,
     cover:
       "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615222314/albums%20covers/Whitepony-cover_kp3wvu.jpg",
-      otherCovers: [
-        "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314112/home%20photos/d3_o6tv6a.jpg",
-        "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314105/home%20photos/d2_usgwl2.jpg"
-      ]
+    otherCovers: [
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314112/home%20photos/d3_o6tv6a.jpg",
+      "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615314105/home%20photos/d2_usgwl2.jpg",
+    ],
   },
 ];
 
