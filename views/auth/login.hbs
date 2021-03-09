@@ -1,7 +1,7 @@
-<h1>Login</h1>
 
+{{> navbar }}
 <form method="post" action="/login" class="form">
-
+    {{> flashGordon }}
     <label for="email">email</label>
     <input class="input" type="email" id="email" name="email" value="test@email.com">
     <label for="password">password</label>
@@ -9,5 +9,5 @@
     <button class="btn">Login</button>
 </form>
 <p>
-    Need to <a href="/register">Register</a> ?
+    First time visit? in that case, you should <a href="/register">Register</a> 
 </p>

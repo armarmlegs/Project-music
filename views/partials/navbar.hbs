@@ -1,0 +1,51 @@
+<div class="big-container">
+    <header class="header">
+        <nav class="nav-wrapper flexed-item">
+            <div class="nav-link-wrapper flexed-item">
+                <div class="nav-logo">
+                    <a href="/" class="flexed-item">
+                        <span class="logo-item circle"></span>
+                        <h3 class="logo-item">Project Music</h3>
+                    </a>
+                </div>
+                <ul class="nav-link flexed-item">
+                    <li class="nav-item animated-link">
+                        <a href="">Album</a>
+                    </li>
+                    <li class="nav-item animated-link">
+                        <a href="">Artist</a>
+                    </li>
+                    <li class="nav-item animated-link">
+                        <a href="">Label</a>
+                    </li>
+                    <li class="nav-item animated-link">
+                        <a href="">Style</a>
+                    </li>
+                     {{#if isLoggedIn}}
+               <li class="nav-item animated-link">
+                        <a href="">Dashboard</a>
+                         <li class="nav-item animated-link"></li>
+                        <a href="/profile">MY PROFILE</a>
+                {{/if}}
+
+                </ul>
+            </div>
+            <div class="flexed-item nav-end">
+                {{#unless isLoggedIn}}
+                <a href="/register" id="nav_register" class="button-ternary flexed-item nav-end-item">
+                    <span class="btn-text">Register</span>
+                </a>
+                <a href="/login" id="nav_login" class="button-ternary flexed-item nav-end-item">
+                    <span class="btn-text">Log in</span>
+                </a>
+                {{/unless}}
+                {{#if isLoggedIn}}
+                <a href="/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
+                    <span class="btn-text">Log out</span>
+                </a>
+                {{/if}}
+                <i class="fas fa-shopping-cart shop-cart-icon nav-end-item"></i>
+            </div>
+        </nav>
+    </header>
+</div>
