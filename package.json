@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www -e js,hbs"
+    "start": "nodemon ./bin/www -e js,hbs",
+    "seed:artist": "node ./bin/seed.artist.js",
+    "seed:album": "node ./bin/seed.album.js"
   },
   "dependencies": {
     "axios": "^0.21.1",

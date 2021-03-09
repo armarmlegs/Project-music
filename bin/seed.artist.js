@@ -69,7 +69,7 @@ const artists = [
   try {
     await ArtistModel.deleteMany(); // empty the styles db collection
     const inserted = await ArtistModel.insertMany(artists); // insert docs in db
-    console.log(`seed artists done : ${inserted.length} documents inserted !`);
+    console.log(`seed artists ok : ${inserted.length} documents inserted !`);
   } catch (err) {
     console.error(err);
   }

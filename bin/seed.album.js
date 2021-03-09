@@ -3,7 +3,7 @@ require("../config/mongodb");
 require("../config/cloudinary")
 // const mongoose = require("mongoose");
 const AlbumModel = require("../models/album");
-// const ArtistModel = require("../models/artist");
+const ArtistModel = require("../models/artist");
 
 
 const albums = [
@@ -46,29 +46,25 @@ const albums = [
   },
 ];
 
+
 (async function insertLabels() {
   try {
     await AlbumModel.deleteMany(); // empty the album db collection
-
     const artists = await Promise.all([
       ArtistModel.findOne({ name: "wu tang clan" }),
-      ArtistModel.findOne({ name: "aphex twin" }),
-      ArtistModel.findOne({ name: "bad brains" }),
-    ]);
+      ArtistModel.findOne({ name: "foo fighters" }),
+      ArtistModel.findOne({ name: "queens of the stone age" }),
+      ArtistModel.findOne({ name: "august burns red" }),
+      ArtistModel.findOne({ name: "rage against the machine" }),
+      ArtistModel.findOne({ name: "deftones" }),
 
+    ]);
     albums[0].artist = artists[0];
     albums[1].artist = artists[1];
     albums[2].artist = artists[2];
-
-    const labels = await Promise.all([
-      LabelModel.findOne({ name: "Loud Records" }),
-      LabelModel.findOne({ name: "Warp Records" }),
-      LabelModel.findOne({ name: "ROIR Records" }),
-    ]);
-
-    albums[0].label = labels[0];
-    albums[1].label = labels[1];
-    albums[2].label = labels[2];
+    albums[3].artist = artists[3];
+    albums[4].artist = artists[4];
+    albums[5].artist = artists[5];
 
     const inserted = await AlbumModel.insertMany(albums); // insert docs in db
     console.log(`seed albums done : ${inserted.length} documents inserted !`);
