@@ -8,6 +8,7 @@
                         <h3 class="logo-item">Project Music</h3>
                     </a>
                 </div>
+                 {{#if isLoggedIn}}
                 <ul class="nav-link flexed-item">
                     <li class="nav-item animated-link">
                         <a href="./../dashboard/album">Album</a>
@@ -21,9 +22,7 @@
                     <li class="nav-item animated-link">
                         <a href="">Style</a>
                     </li> --}}
-                     {{#if isLoggedIn}}
-               <li class="nav-item animated-link">
-                        <a href="">Dashboard</a>
+            
                          <li class="nav-item animated-link"></li>
                         <a href="/profile">MY PROFILE</a>
                 {{/if}}

@@ -1,4 +1,4 @@
-<h1 class="title">
+
        {{>navbar}}
     <span>All artists</span>
     <a href="/dashboard/artist/create" class="link artist"><i class="fa fa-plus"></i></a>
@@ -24,7 +24,7 @@
             
             <td class="cell name">{{name}}</td>
             <td class="cell desc">{{description}}</td>
-            <td class="cell label">{{label}}</td>
+            <td class="cell label">{{label.name}}</td>
             <td class="cell styles">{{styles}}</td>
             <td class="cell picture" style="background-image: url({{picture}})"></td>
            <td class="cell update" >   <a href="/dashboard/artist/update/{{_id}}">
