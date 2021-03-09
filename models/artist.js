@@ -13,13 +13,17 @@ const artistSchema = new Schema({
       default:
         "https://cdn6.aptoide.com/imgs/1/4/c/14c166cc3cd2cac8da4809024ba82d0e_icon.png",
     },
+    band: String,
+  }, 
+
+/*
   },
   styles: [{ type: Schema.Types.ObjectId, ref: "style" }],
   picture: {
     type: String,
     default:
       "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg",
-  },
+  }, */
 });
 
 const ArtistModel = mongoose.model("artist", artistSchema);
