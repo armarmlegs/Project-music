@@ -43,7 +43,7 @@ const albums = [
     releaseDate: new Date("20/06/2000"),
     artist: null,
     cover: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615222314/albums%20covers/Whitepony-cover_kp3wvu.jpg",
-  }
+  },
 ];
 
 (async function insertLabels() {

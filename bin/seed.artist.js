@@ -1,9 +1,7 @@
 require("dotenv").config();
 require("../config/mongodb");
 require("../config/cloudinary")
-// const mongoose = require("mongoose");
 const ArtistModel = require("../models/artist");
-// const AlbumModel = require("../models/album");
 
 const artists = [
   {
@@ -67,7 +65,7 @@ const artists = [
 },
   },
 ];
-/*(async function insertLabels() {
+(async function insertLabels() {
   try {
     await ArtistModel.deleteMany(); // empty the styles db collection
     const inserted = await ArtistModel.insertMany(artists); // insert docs in db
@@ -75,4 +73,4 @@ const artists = [
   } catch (err) {
     console.error(err);
   }
-})(); */
+})();
