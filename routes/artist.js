@@ -2,9 +2,10 @@ const express = require("express");
 const router = new express.Router();
 const ArtistModel = require("./../models/artist");
 const uploader = require("./../config/cloudinary");
+const protectRoute = require("./../middlewares/thisProtector");
 
 // GET - Trouver les artists
-router.get("/", async (req, res, next) => {
+router.get("/", protectRoute, async (req, res, next) => {
   try {
     res.render("dashboard/artists", { artists: await ArtistModel.find() });
   } catch (err) {
