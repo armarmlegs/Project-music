@@ -1,0 +1,24 @@
+<form method="post" action="/dashboard/album" class="form" enctype="multipart/form-data">
+    <h1  class="title">CREATE AN ALBUM</h1>
+
+    <label for="title" class="label">Title</label>
+    <input class="input" type="text" id="name" name="title" value="song title">
+
+      <label for="Date" class="label">ReleaseDate</label>
+    <input class="input" type="text" id="name" name="label" value="2020-12-10">
+
+   <label for="select-artist">artist</label>
+    <select id="select-artist" name="artist" class="input">
+        {{#each artists}}
+        <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+
+    <label for="picture" class="label">
+       Cover
+        <i class="icon fas fa-cloud-upload-alt fa-2x"></i>
+    </label>
+    <input class="is-hidden" type="file" id="picture" name="picture">
+
+    <button class="btn">create</button>
+</form>
