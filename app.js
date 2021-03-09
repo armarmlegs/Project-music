@@ -45,10 +45,14 @@ app.use(flash());
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const authRouter = require ("./routes/auth")
+const authRouter = require ("./routes/auth");
+const artistRouter = require("./routes/artist");
+const albumRouter = require("./routes/album");
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', authRouter);
+app.use("/dashboard/artist", artistRouter);
+app.use("/dashboard/album", albumRouter);
 
 
 

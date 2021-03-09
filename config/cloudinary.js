@@ -19,7 +19,6 @@ const storage = new CloudinaryStorage({
   },
 });
 
-//coucou
 
 const fileUploader = multer({ storage });
 // a middleware designed to parse file from requests and associate to req.file
