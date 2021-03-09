@@ -9,7 +9,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_SECRET,
 });
 
-// cloudinary : SAAS platform : specialized in images hosting (tools : metadata, image analyzing ...)
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   folder: ['albums covers', 'logos'],
@@ -19,7 +18,6 @@ const storage = new CloudinaryStorage({
   },
 });
 
-//coucou
 
 const fileUploader = multer({ storage });
 // a middleware designed to parse file from requests and associate to req.file
