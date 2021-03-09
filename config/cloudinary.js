@@ -11,7 +11,7 @@ cloudinary.config({
 
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
-  folder: ['albums covers', 'logos'],
+  folder: ['albums covers', 'logos', 'band'],
   allowedFormats: ['jpeg', 'png' ],
   filename: function (req, file, cb) {
     cb(null, file.originalname);

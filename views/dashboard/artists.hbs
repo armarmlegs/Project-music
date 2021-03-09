@@ -1,9 +1,10 @@
-
-       {{>navbar}}
-    <span>All artists</span>
-    <a href="/dashboard/artist/create" class="link artist"><i class="fa fa-plus"></i></a>
+{{>navbar}}
+<span>All artists</span>
+<a href="/dashboard/artist/create" class="link artist"><i class="fa fa-plus"></i></a>
 </h1>
 <hr>
+
+
 
 {{#unless artists.length}}
 <p>sorry, no artists yet</p>
@@ -13,28 +14,37 @@
         <th class="cell">name</th>
         <th class="cell">description</th>
         <th class="cell">label</th>
-         <th class="cell">styles</th>
-         <th class="cell">picture</th> 
+        <th class="cell">styles</th>
+        <th class="cell">picture</th>
         <th class="cell">update</th>
         <th class="cell">delete</th>
     </thead>
     <tbody class="body">
-        {{#each artists}}
+
+      <!-- {{#each artists}} 
+        <div>
+            {{this.label}}
+            {{this.band}} à voir later
+        </div>
+        {{/each}} -->
+
+     {{#each artists}}
         <tr class="row">
-            
+
             <td class="cell name">{{name}}</td>
             <td class="cell desc">{{description}}</td>
             <td class="cell label">{{label.name}}</td>
-            <td class="cell styles">{{styles}}</td>
-            <td class="cell picture" style="background-image: url({{band}})"></td>
-           <td class="cell update" >   <a href="/dashboard/artist/update/{{_id}}">
-                <button>update artist</button>
+            <td class="cell label logo">{{this.label.logo}}</td> 
+            <td class="cell styles"><img src="{{this.label.logo}}"></td>
+            <td class="cell picture" style="background-image: url('{{label.logo}}')"></td>
+            <td class="cell update"> <a href="/dashboard/artist/update/{{_id}}">
+                    <button>update artist</button>
                 </a>
             </td>
-            <td class="cell delete">    <a href="/dashboard/artist/delete/{{_id}}">  <button>delete artist</button> </a>   
+            <td class="cell delete"> <a href="/dashboard/artist/delete/{{_id}}"> <button>delete artist</button> </a>
             </td>
         </tr>
-        {{/each}}
+        {{/each}} 
     </tbody>
 </table>
 {{/unless}}
