@@ -8,17 +8,17 @@
                         <span class="logo-item circle"></span>
                         <h3 class="logo-item"> <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000" style="
     margin-top: 3px;"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
-                            HOME</h3> 
+                          &ensp;  HOME</h3> 
                 
                     </a>
                 </div>
                 {{#unless isLoggedIn}}
                 <ul class="nav-link flexed-item">
                     <li class="nav-item animated-link"> 
-                        <a href="./../albums"> Album List</a>
+                        <a href="./../albums"><img class="icon-profil-2" src="/images/sound.png"/> &ensp;Album List &ensp;</a>
                     </li>
                     <li class="nav-item animated-link">
-                        <a href="./../artists">Artist List</a>
+                        <a href="./../artists"><img class="icon-profil-2" src="/images/microphone.png"/> &ensp;Artist List</a>
                     </li>
 
                     {{/unless}}
@@ -26,10 +26,10 @@
                  {{#if isLoggedIn}}
                 <ul class="nav-link flexed-item">
                     <li class="nav-item animated-link"> 
-                        <a href="./../dashboard/album"> Album</a>
+                        <a href="./../dashboard/album"><img class="icon-profil-2" src="/images/sound.png"/> &ensp;Album &ensp;</a>
                     </li>
                     <li class="nav-item animated-link">
-                        <a href="./../dashboard/artist">Artist</a>
+                        <a href="./../dashboard/artist"><img class="icon-profil-2" src="/images/sound.png"/> &ensp;Artist &ensp;</a>
                     </li>
                     {{!-- <li class="nav-item animated-link">
                         <a href="">Label</a>
@@ -39,24 +39,24 @@
                     </li> --}}
             
                          <li class="nav-item animated-link"></li>
-                        <i class="fas fa-record-vinyl"></i> <a href="/profile">MY PROFILE</a>
+                         <a href="/profile"><img class="icon-profil-2" src="/images/profile-user.png"/>&ensp;MY PROFILE</a>
                 {{/if}}
 
                 </ul>
             </div>
             <div class="flexed-item nav-end">
                 {{#unless isLoggedIn}}
-                <a href="/register" id="nav_register" class="button-ternary flexed-item nav-end-item">
-                    <span class="btn-text">
+                <a href="/register" id="nav_register" class="button-ternary flexed-item nav-end-item"><img class="icon-profil-2" src="/images/edit.png"/>
+                    <span class="btn-text">&ensp;
                     REGISTER</span>
                 </a>
-                <a href="/login" id="nav_login" class="button-ternary flexed-item nav-end-item">
-                    <span class="btn-text">LOG IN</span>
+                <a href="/login" id="nav_login" class="button-ternary flexed-item nav-end-item"><img class="icon-profil-2" src="/images/login.png"/>
+                    <span class="btn-text">&ensp;LOG IN</span>
                 </a>
                 {{/unless}}
                 {{#if isLoggedIn}}
-                <a href="/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
-                    <span class="btn-text">LOG OUT</span>
+                <a href="/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item"><img class="icon-profil-2" src="/images/logout.png"/>
+                    <span class="btn-text"> &ensp; LOG OUT</span>
                 </a>
                 {{/if}}
                

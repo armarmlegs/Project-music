@@ -9,6 +9,7 @@ const user = [
     email: "master@key.key",
     role: "admin",
     avatar: "",
+    favesArtist: null,
   },
 ];
 

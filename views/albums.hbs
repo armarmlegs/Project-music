@@ -1,14 +1,15 @@
 
 {{> navbar}}
-
-<h1>All albums</h1>
-
-<div class="cards">
+<h1 class="all-album">  <br> &ensp; &ensp;All albums <br>  </h1> 
+<div class="card">
     {{#each albums}}
-    <div class="card album" style="background-image: url({{cover}}">
-        <a href="/albums/albums/{{this._id}}">
-            {{this.title}}
+    <div class="every">
+<img class="cover2" src="{{cover}}">
+        <a class="lol" href="/albums/albums/{{this._id}}"><br>
+           &ensp;  {{this.title}}<br>
         </a>
-    </div>
+        <br>
+       </div>
     {{/each}}
+   
 </div>

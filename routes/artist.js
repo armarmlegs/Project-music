@@ -3,7 +3,7 @@ const router = new express.Router();
 const ArtistModel = require("./../models/artist");
 const uploader = require("./../config/cloudinary");
 const protectRoute = require("./../middlewares/thisProtector");
-
+const userModel = require("./../models/user");
 // GET - Trouver les artists
 router.get("/", protectRoute, async (req, res, next) => {
   try {
