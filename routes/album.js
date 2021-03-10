@@ -5,11 +5,12 @@ const AlbumModel = require("./../models/album");
 const uploader = require("./../config/cloudinary");
 // const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 const protectRoute = require("./../middlewares/thisProtector");
+const protectAdmin = require("./../middlewares/protectAdmin")
 
 // router.use(protectAdminRoute);
 
 // GET - all albums
-router.get("/", protectRoute, async (req, res, next) => {
+router.get("/", protectRoute, protectAdmin, async (req, res, next) => {
   try {
     res.render("dashboard/albums", { albums: await AlbumModel.find().populate("artist label") });
   } catch (err) {

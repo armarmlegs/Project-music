@@ -7,7 +7,7 @@ const ArtistModel = require("./../models/artist");
 
 const albums = [
   {
-    title: "messengers",
+    title: "Messengers",
     releaseDate: new Date("06/19/2007"),
     artist: null,
     cover:
@@ -19,7 +19,7 @@ const albums = [
     ],
   },
   {
-    title: "wu tang forever",
+    title: "Wu Tang Forever",
     releaseDate: new Date("03/06/1997"),
     artist: null,
     cover:
@@ -30,7 +30,7 @@ const albums = [
     ],
   },
   {
-    title: "wasting lights",
+    title: "Wasting Lights",
     releaseDate: new Date("04/12/2011"),
     artist: null,
     cover:
@@ -41,7 +41,7 @@ const albums = [
     ],
   },
   {
-    title: "era vulgaris",
+    title: "Era Vulgaris",
     releaseDate: new Date("06/12/2007"),
     artist: null,
     cover:
@@ -53,7 +53,7 @@ const albums = [
     ],
   },
   {
-    title: "rage against the machine",
+    title: "Rage Against The Machine",
     releaseDate: new Date("11/03/1992"),
     artist: null,
     cover:
@@ -64,7 +64,7 @@ const albums = [
     ],
   },
   {
-    title: "white pony",
+    title: "White Pony",
     releaseDate: new Date("06/20/2000"),
     artist: null,
     cover:

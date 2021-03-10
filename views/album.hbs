@@ -1,8 +1,11 @@
-<h1>{{albums.title}}</h1>
+
+{{> navbar}}
+<h1>{{title}}</h1>
 <p>
-    {{artist}} recorded this album the {{albums.releaseDate}}
+    {{artist.name}} recorded this album the {{releaseDate}}
 </p>
 <img src="{{cover}}" alt="{{title}}'s cover'">
 <p>
-    produced by {{label.name}}
+    produced by {{artist.label.name}}
 </p>
+
