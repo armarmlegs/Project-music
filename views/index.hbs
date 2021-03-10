@@ -2,9 +2,19 @@
 
 {{> flashGordon }}
 <div class="home-body">
-<h1>{{title}}</h1>
-{{!-- <p>Welcome to {{title}}</p> --}}
+<h1>Our Daily Vinyl Collection
+</h1>
 </div>
- 
-<div class="image"></div>
+<h2>
+<div class="cards">
+    {{#each Albums}}
+            {{!-- {{this.title}} --}}
+            <a class="cover-to-click" href="/albums/albums/:id"><img class="cover" src="{{cover}}"> </a>
+    {{/each}}
+</div>
+</h2>
+
+
+
+
 
