@@ -1,77 +1,40 @@
-{{>navbar}}
+
+{{> navbar}}
 <span>All artists</span>
-<a href="/dashboard/artist/create" class="link artist"><i class="fa fa-plus"></i></a>
-</h1>
-<hr>
+
 
 {{#unless artists.length}}
-<p>sorry, no artists yet</p>
+<p>Sorry, no artists yet</p>
+
 {{else}}
 <table class="table">
     <thead class="head">
-        <th class="cell">name</th>
-        <th class="cell">description</th>
-        <th class="cell">label</th>
-        <th class="cell">styles</th>
-        <th class="cell">logo</th>
-        <th class="cell">update</th>
-        <th class="cell">delete</th>
+        <th class="cell">Name</th>
+        <th class="cell">Description</th>
+        <th class="cell">Label</th>
+        <th class="cell"> Picture</th>
+         <th class="cell"> Update</th>
+          <th class="cell"> Delete</th>
     </thead>
     <tbody class="body">
-        {{#each artists}}
-        <tr class="row">
+      {{#each artists}}
+      <tr class="row"> 
+          <td class="cell name">{{name}}</td>
+          <td class="cell description">{{description}}</td>
+          <td class="cell label">{{label.name}}-{{label.city}}</td>
+          <td class="cell picture" style="background-image: url({{picture}})"></td>
+          <td class="cell update"> 
+              <a href="/dashboard/artist/update/{{_id}}">
+              <button>update</button></a>
+          </td>
+          <td class="cell delete">
+              <a href="/dashboard/artist/delete/{{_id}}">
+              <button>Delete</button></a>
 
-            <td class="cell name">{{name}}</td>
-            <td class="cell desc">{{description}}</td>
-            <td class="cell label">{{label.name}}</td>
-            <td class="cell styles">{{styles}}</td>
-            <td class="cell logo" style="background-image: url({{picture}})"></td>
-            <td class="cell update">
-                <a href="/dashboard/artist/update/{{_id}}">
-                    <button>update artist</button>
-                </a>
-            </td>
-            <td class="cell delete"> <a href="/dashboard/artist/delete/{{_id}}"> <button>delete artist</button> </a>
-            </td>
-        </tr>
-        {{/each}}
+          </td>
+          </tr>
+
+      {{/each}}  
     </tbody>
 </table>
 {{/unless}}
-
-{{!-- {{>navbar}}
-<span>All artists</span>
-<a href="/dashboard/artist/create" class="link album"><i class="fa fa-plus"></i></a>
-</h1>
-<hr>
-{{#unless artists.length}}
-<p>sorry, no Artists yet</p>
-{{else}}
-<table class="table">
-    <thead class="head">
-        <th class="cell">title</th>
-        <th class="cell">released</th>
-        <th class="cell">artist</th>
-        <th class="cell">cover</th>
-        <th class="cell">update</th>
-        <th class="cell">delete</th>
-    </thead>
-    <tbody class="body">
-        {{#each albums}}
-        <tr class="row">
-            <td class="cell name">{{title}}</td>
-            <td class="cell name">{{releaseDate}}</td>
-            <td class="cell artist">{{artist.name}}</td>
-            <td class="cell cover" style="background-image: url({{logo}})"></td>
-            <td class="cell update"> <a href="/dashboard/album/update/{{_id}}">
-                    <button>update album</button>
-                </a>
-            </td>
-            <td class="cell delete"> <a href="/dashboard/album/delete/{{_id}}"> <button>delete album</button> </a>
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
-
-{{/unless}} --}}

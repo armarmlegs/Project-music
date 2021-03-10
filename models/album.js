@@ -15,6 +15,7 @@ const albumSchema = new Schema(
         default:
           "",
       },
+   
     },
     { timestamps: true }
    
