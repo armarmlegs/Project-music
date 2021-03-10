@@ -1,5 +1,5 @@
-{{> navbar }}
 
+{{> navbar}}
 {{> flashGordon }}
 <div class="home-body">
 <h1>Our Daily Vinyl Collection
@@ -9,7 +9,7 @@
 <div class="cards">
     {{#each Albums}}
             {{!-- {{this.title}} --}}
-            <a class="cover-to-click" href="/albums/albums/:id"><img class="cover" src="{{cover}}"> </a>
+            <a class="cover-to-click" href="/albums/albums/{{_id}}"><img class="cover" src="{{cover}}"> </a>
     {{/each}}
 </div>
 </h2>

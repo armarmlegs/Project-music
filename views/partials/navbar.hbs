@@ -12,6 +12,17 @@
                 
                     </a>
                 </div>
+                {{#unless isLoggedIn}}
+                <ul class="nav-link flexed-item">
+                    <li class="nav-item animated-link"> 
+                        <a href="./../albums"> Album List</a>
+                    </li>
+                    <li class="nav-item animated-link">
+                        <a href="./../artists">Artist List</a>
+                    </li>
+
+                    {{/unless}}
+
                  {{#if isLoggedIn}}
                 <ul class="nav-link flexed-item">
                     <li class="nav-item animated-link"> 

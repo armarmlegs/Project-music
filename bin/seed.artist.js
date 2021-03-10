@@ -4,11 +4,11 @@ const ArtistModel = require("../models/artist");
 
 const artists = [
   {
-    name: "august burns red",
-    description: "american metalcore",
+    name: "August Burns Red",
+    description: "Hailing from the deepest corner of Mariana's Trench, melodic and brutal",
     label: {
-        name: "solid-state",
-        city: "seattle",
+        name: "Solid-State",
+        city: "Seattle",
         country: "usa",
         logo: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214221/logos/solidstate_yldmlj.jpg"
       
@@ -16,10 +16,10 @@ const artists = [
     band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299690/pictures%20%28bands%29/august-picture_bkftwh.jpg",
 },
   {
-    name: "wu tang clan",
-    description: "a legendary hip hop crew",
+    name: "Wu Tang Clan",
+    description: "You best protect Ya Neck",
     label: {
-        name: "loud",
+        name: "Loud",
         city: "santa-monica",
         country: "usa",
         picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214353/logos/loud-records_z5so7s.jpg",
@@ -27,10 +27,10 @@ const artists = [
   band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299772/pictures%20%28bands%29/wutang-picture_bacqax.jpg",
 },
   {
-    name: "foo fighters",
+    name: "Foo Fighters",
     description: "alternative hard rock",
     label: {
-        name: "rca",
+        name: "Rca",
         city: "new_york",
         country: "usa",
         picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214569/logos/rca-logo_l9ljcf.png",
@@ -38,8 +38,8 @@ const artists = [
   band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299705/pictures%20%28bands%29/foofighters-picture_otjvd1.jpg",
 },
   {
-    name: "queens of the stone age",
-    description: "stoner alternative rock",
+    name: "Queens Of The Stone Age",
+    description: "No One Knows",
     label: {
         name: "matador-records",
         city: "london",
@@ -49,10 +49,10 @@ const artists = [
   band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299741/pictures%20%28bands%29/qotsa-picture_wzz7ma.jpg",
 },
   {
-    name: "rage against the machine",
-    description: "rap metal",
+    name: "Rage Against The Machine",
+    description: "Sleep now in a fireeeeee",
     label: {
-        name: "epic-records",
+        name: "Epic-records",
         city: "new_york",
         country: "usa",
         picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214773/logos/epic-logo_y8lcbt.png",
@@ -60,10 +60,10 @@ const artists = [
   band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299725/pictures%20%28bands%29/rage-picture_ewnyya.jpg",
 },
   {
-    name: "deftones",
+    name: "Deftones",
     description: "alternative metal",
     label: {
-      name: "warner",
+      name: "Warner",
       city: "new_york",
       country: "usa",
       picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615221861/logos/warner-logo_jpi7c2.png"

@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon ./bin/www -e js,hbs",
     "seed:artist": "node ./bin/seed.artist.js",
-    "seed:album": "node ./bin/seed.album.js"
+    "seed:album": "node ./bin/seed.album.js",
+    "seed:user": "node ./bin/seed.user.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
