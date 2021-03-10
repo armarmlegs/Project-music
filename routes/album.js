@@ -17,6 +17,9 @@ router.get("/", protectRoute, async (req, res, next) => {
   }
 });
 
+
+
+
 // GET - create one album (form)
 router.get("/create", async (req, res, next) => {
   const artists =  await ArtistModel.find();
