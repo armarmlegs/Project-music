@@ -10,8 +10,8 @@ const artistSchema = new Schema({
     country: String,
     logo: {
       type: String,
-      /*default:
-        "https://cdn6.aptoide.com/imgs/1/4/c/14c166cc3cd2cac8da4809024ba82d0e_icon.png", */
+      default:
+        "https://cdn6.aptoide.com/imgs/1/4/c/14c166cc3cd2cac8da4809024ba82d0e_icon.png", 
     },
   }, 
 
