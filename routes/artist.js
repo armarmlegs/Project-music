@@ -38,7 +38,7 @@ router.get("/delete/:id", async (req, res, next) => {
 });
 
 // POST - CREER UN ARTIST
-router.post("/", uploader.single("picture"), async (req, res, next) => {
+router.post("/", uploader.single("logo"), async (req, res, next) => {
   const newArtist = { ...req.body };
 
   if (!req.file) newArtist.picture = undefined;

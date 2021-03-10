@@ -1,39 +1,38 @@
-{{>navbar}}
-<span>All artists</span>
-<a href="/dashboard/artist/create" class="link artist"><i class="fa fa-plus"></i></a>
-</h1>
-<hr>
 
+{{> navbar}}
+<span>All artists</span>
 
 
 {{#unless artists.length}}
-<p>sorry, no artists yet</p>
+<p>Sorry, no artists yet</p>
+
 {{else}}
 <table class="table">
     <thead class="head">
-        <th class="cell">name</th>
-        <th class="cell">description</th>
-        <th class="cell">label</th>
-        <th class="cell">logo</th>
-        {{!-- <th class="cell">picture</th> --}}
-        <th class="cell">update</th>
-        <th class="cell">delete</th>
+        <th class="cell">Name</th>
+        <th class="cell">Description</th>
+        <th class="cell">Label</th>
+        <th class="cell"> Picture</th>
+         <th class="cell"> Update</th>
+          <th class="cell"> Delete</th>
     </thead>
-    
-    <tbody class="body-tab">
-<div class="tab">
-      <!-- {{#each artists}} 
-        <div>
-            {{this.label}}
-            {{this.band}} à voir later
-        </div>
-        {{/each}} -->
+    <tbody class="body">
+      {{#each artists}}
+      <tr class="row"> 
+          <td class="cell name">{{name}}</td>
+          <td class="cell description">{{description}}</td>
+          <td class="cell label">{{label.name}}-{{label.city}}</td>
+          <td class="cell picture" style="background-image: url({{picture}})"></td>
+          <td class="cell update"> 
+              <a href="/dashboard/artist/update/{{_id}}">
+              <button>update</button></a>
+          </td>
+          <td class="cell delete">
+              <a href="/dashboard/artist/delete/{{_id}}">
+              <button>Delete</button></a>
 
-     {{#each artists}}
-        <tr class="row">
-            <td class="cell-name">{{name}}</td>
-
-<<<<<<< HEAD
+          </td>
+          </tr>
             <td class="cell name">{{name}}</td>
             <td class="cell desc">{{description}}</td>
             <td class="cell label">{{label.name}}</td>
@@ -42,18 +41,14 @@
             <td class="cell picture" style="background-image: url('{{label.logo}}')"></td>
             <td class="cell picture">{{this.band}}</td>
             <td class="cell picture"><img src="{{this.band}}"></td>
-=======
+
             <td class="cell-desk">{{description}}</td>
             <td class="cell-label">{{label.name}}</td>
             {{!-- <td class="cell label logo">{{this.label.logo}}</td>  --}}
             <td class="logo"><img src="{{this.label.logo}}"style="  width: 80px; height: 50px;"></td>
             {{!-- <td class="cell picture" style="background-image: url('{{label.logo}}')"></td> --}}
-<<<<<<< HEAD
             <td class="cell-update"> <a href="/dashboard/artist/update/{{_id}}">
-=======
->>>>>>> 7b3e2b8ff2cb499b0fdcfc2d4800a223133eb47b
-            <td class="cell update"> <a href="/dashboard/artist/update/{{_id}}">
->>>>>>> 4ac5835ec9f0289635d0a1613011ee75e9e184ba
+            {{!-- <td class="cell update"> <a href="/dashboard/artist/update/{{_id}}"> --}}
                     <button>update artist</button>
                 </a>
             </td>
@@ -62,7 +57,8 @@
         </tr>
         {{/each}} 
            </div>
+
+      {{/each}}  
     </tbody>
-    
 </table>
 {{/unless}}

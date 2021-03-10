@@ -168,9 +168,7 @@ h2.logo-item {
   background-size: cover;
 }
 
-table.table {
 
-}
 
 
 html, body {
@@ -240,11 +238,37 @@ margin-top: 20px;
   align-items: center;
 }
 
-.cell-update{
+.cell.update{
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
   font-family: 'Pathway Gothic One', sans-serif;
   margin-top: 20px;
   align-items: center;
+}
+
+.table .cell.picture {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fas {
+  
+  font-size: 20px;
+}
+
+.preview{
+  width: 150px;
+}
+
+.cell .cover{
+  background-size: cover;
+}
+
+.cell{
+  font-size: 15px;
+}
+
+.row{
+  font: 15px;
 }

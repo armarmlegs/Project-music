@@ -15,9 +15,7 @@ const albumSchema = new Schema(
         default:
           "",
       },
-      otherCovers: {
-        type: String
-      }
+   
     },
     { timestamps: true }
    
