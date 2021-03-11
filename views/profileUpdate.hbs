@@ -2,26 +2,28 @@
 <h2 class="update-title" style="
     margin-top: 0px;">  <br> profile Update page <br> <br></h2>
 <br>
+<h3 class="hello">
 <form method="POST" action="/profile/{{_id}}" class="form">
 
     <label for="username" class="label">User Name</label>
-    <input class="input" type="text" id="username" name="username" value="{{username}}">
-
+    <input class="input2" type="text" id="username" name="username" value="{{username}}">
+    <br>
     <label for="email" class="label">Email</label>
-    <input class="input" type="email" id="email" name="email" value="{{email}}">
-
+    <input class="input2" type="email" id="email" name="email" value="{{email}}">
+<br>
     {{!-- <label for="faveArtist" class="label">Favorite Artists</label>
     <input class="input" type="text" id="text" name="favesArtist" value="{{favesArtist}}"> --}}
 
        <label for="role" class="label">Roles</label>
+       <br>
        <select name="role" id="role">
            <option value="{{role}}">--Please choose a role--</option>
            <option value="user">user</option>
            <option value="admin">admin</option>
        </select>
-   
-
-
-    <button class="btn">update</button>
+   <br>
+   <br>
+    <button class="big-button">update</button>
 
     </form>
+    </h3>

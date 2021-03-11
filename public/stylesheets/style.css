@@ -490,12 +490,6 @@ button.big-button:active::before {
       box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
 
 }
-.cover3{
-  width: 150px;
-  height: 150px;
-  border: 1px solid black;;
-  box-shadow: 10px 5px 5px #d6c396;
-}
 
 .row2 {
   text-transform: uppercase;
@@ -526,6 +520,36 @@ background-color: #d6c396;
   text-align: center;
 }
 
-.form {
-  
+.hello{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display:flex;
+  flex-direction: column;
+  background-color:#d6c396 ;
+}
+
+.role {
+  border: 1px solid black;
+  background-color: #d6c396;
+}
+
+.cover3 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+img.cover3 {
+  display: flex;
+  justify-content: center;
+}
+
+.input3 {
+  display:flex;
+  flex-direction: column;
+  background-color:#d6c396 ;
 }
