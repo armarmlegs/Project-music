@@ -100,7 +100,7 @@ artist: null,
     albums[4].artist = artists[4]
     albums[5].artist = artists[5]
 
-    console.log("sortie du try ");
+  
 
     const inserted = await AlbumModel.insertMany(albums); // insert docs in db
     console.log(`seed albums done : ${inserted.length} documents inserted !`);

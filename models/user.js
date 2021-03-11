@@ -32,9 +32,9 @@ const userSchema = new Schema({
     default:
       "https://res.cloudinary.com/gdaconcept/image/upload/v1614762472/workshop-artistify/default-profile_tbiwcc.jpg",
   },
-  favesArtist: { type: Schema.Types.ObjectId, ref: "artist" },
+  //favesArtist: { type: Schema.Types.ObjectId, ref: "artist" },
 
-  favesAlbum: { type: Schema.Types.ObjectId, ref: "album" },
+  //favesAlbum: { type: Schema.Types.ObjectId, ref: "album" },
 });
 
 const UserModel = mongoose.model("users", userSchema);

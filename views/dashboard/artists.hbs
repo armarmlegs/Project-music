@@ -1,14 +1,17 @@
 
 {{> navbar}}
-<span>All artists</span>
+  
+<div class="sizing">
+<a href="/dashboard/artist/create" class="link album">You can create an artist here<i class="fa fa-plus"></i> </a>
 
-<a href="/dashboard/artist/create" class="link album"><i class="fa fa-plus"></i></a>
+</div>
 
 {{#unless artists.length}}
 <p>Sorry, no artists yet</p>
 
 {{else}}
-<table class="table">
+<table class="table" 
+  style="margin-top: 15px;">
     <thead class="head">
         <th class="cell">Picture</th>
         <th class="cell">Name</th>
@@ -17,20 +20,20 @@
          <th class="cell"> Update</th>
           <th class="cell"> Delete</th>
     </thead>
-    <tbody class="body">
+    <tbody class="body4">
       {{#each artists}}
-      <tr class="row"> 
-          <td class="cell picture" style="background-image: url({{picture}})"></td>
-          <td class="cell name">{{name}}</td>
-          <td class="cell description">{{description}}</td>
-          <td class="cell label">{{label.name}}-{{label.city}}</td>
-          <td class="cell update"> 
+      <tr class="row2"> 
+          <td class="cover4"style=" padding-left: 1%;"> <img class="band" src="{{picture}}"></td>
+          <td class="cell-name"style=" padding-left: 4%;">{{name}}</td>
+          <td class="cell description"style=" padding-left: 5%;">{{description}}</td>
+          <td class="cell label"style=" padding-left: 3%;">{{label.name}}@{{label.city}}</td>
+          <td class="cell update"style=" padding-left: 1%;"> 
               <a href="/dashboard/artist/update/{{_id}}">
-              <button>update</button></a>
+              <button class="big-button">update</button></a>
           </td>
-          <td class="cell delete">
+          <td class="cell delete" style=" padding-left: 1%;">
               <a href="/dashboard/artist/delete/{{_id}}">
-              <button>Delete</button></a>
+              <button class="big-button">Delete</button></a>
 
           </td>
           </tr>

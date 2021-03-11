@@ -1,12 +1,15 @@
     {{>navbar}}
-    <span>All albums</span>
-    <a href="/dashboard/album/create" class="link album"><i class="fa fa-plus"></i></a>
+    <div class="sizing">
+<a href="/dashboard/album/create" class="link album">You can create an album here<i class="fa fa-plus"></i> </a>
+
+</div>
+
 </h1>
 <hr>
 {{#unless albums.length}}
 <p>sorry, no albums yet</p>
 {{else}}
-<table class="table">
+<table class="table" >
     <thead class="head">
      <th class="cell">title</th>
         <th class="cell">released</th>

@@ -6,7 +6,7 @@ const uploader = require("./../config/cloudinary");
 const userModel = require("./../models/user");
 // const protectAdminRoute = require("./../middlewares/protectAdminRoute");
 const protectRoute = require("./../middlewares/thisProtector");
-const protectAdmin = require("./../middlewares/protectAdmin")
+const protectAdmin = require("./../middlewares/protectAdmin");
 
 // router.use(protectAdminRoute);
 
@@ -18,9 +18,6 @@ router.get("/", protectRoute, async (req, res, next) => {
     next(err);
   }
 });
-
-
-
 
 // GET - create one album (form)
 router.get("/create", protectRoute, async (req, res, next) => {

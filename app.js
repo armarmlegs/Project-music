@@ -67,7 +67,7 @@ app.use('/', authRouter);
 app.use("/dashboard/artist", artistRouter);
 app.use("/dashboard/album", albumRouter);
 app.use("/albums", albumDetsRouter);
-app.use("/artists", artistDetsRouter)
+app.use("/artists", artistDetsRouter);
 
 
 
