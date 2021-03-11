@@ -1,12 +1,15 @@
     {{>navbar}}
-    <span>All albums</span>
-    <a href="/dashboard/album/create" class="link album"><i class="fa fa-plus"></i></a>
+    <div class="sizing">
+<a href="/dashboard/album/create" class="link album">You can create an album here<i class="fa fa-plus"></i> </a>
+
+</div>
+
 </h1>
 <hr>
 {{#unless albums.length}}
 <p>sorry, no albums yet</p>
 {{else}}
-<table class="table">
+<table class="table" >
     <thead class="head">
      <th class="cell">title</th>
         <th class="cell">released</th>
@@ -20,7 +23,7 @@
         <tr class="row2">
           <td class="cell-name" style=" padding-left: 5%;">{{title}}</td>
          <td class="cell-date" style=" padding-left:5%;">{{releaseDate}}</td>
-       <td class="cell artist" style=" padding-left: 5%;">{{artist.name}}</td>
+       <td class="cell-artist" style=" padding-left: 5%;">{{artist.name}}</td>
          <td style="padding-left: 2%;"> <img class="cover3" src="{{cover}}"></td>
            <td class="cell update" style=" padding-left: 2%;"><a href="/dashboard/album/update/{{_id}}">
                 <button class="big-button">update album</button>

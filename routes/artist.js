@@ -41,18 +41,14 @@ router.get("/delete/:id", protectRoute, async (req, res, next) => {
 });
 
 // POST - CREER UN ARTIST
-router.post(
-  "/",
-  uploader.single("logo"),
-  protectRoute,
-  async (req, res, next) => {
+router.post(  "/",uploader.single("picture"),protectRoute,async (req, res, next) => {
     const newArtist = { ...req.body };
 
     if (!req.file) newArtist.picture = undefined;
     else newArtist.picture = req.file.path;
     newArtist.isBand = req.body.isBand === "on";
 
-    try {
+    try {   
       await ArtistModel.create(newArtist);
       res.redirect("/dashboard/artist");
     } catch (err) {
@@ -62,11 +58,7 @@ router.post(
 );
 
 // POST - UPDATER UN ARTIST
-router.post(
-  "/:id",
-  uploader.single("picture"),
-  protectRoute,
-  async (req, res, next) => {
+router.post("/:id", uploader.single("picture"),protectRoute, async (req, res, next) => {
     try {
       const artistToUpdate = { ...req.body };
       // if (req.file) artistToUpdate.picture = req.file.path;

@@ -2,8 +2,8 @@
 
 {{> navbar}}
 
-
 <ul>
+  <li><h2 class="welcome">welcome to your very own, personnal profile {{users.username}}</h2>  </li>
   <li> <img class="icon-profil" src="/images/id-card.png" /> &ensp; USERNAME : {{users.username}}</li>
   <br>
   <br>
@@ -12,14 +12,10 @@
   <br>
   <li><img class="icon-profil" src="/images/hat.png" /> &ensp; ROLE : {{users.role}} </li>
   <br>
-
+   <br>
+    <br>
+     <br>
+  <li><a href="/profileUpdate/{{users.id}}"><button class="big-button">Update User Profile</button></a></li>
 </ul>
-<aside>welcome to your very own, personnal profile {{users.username}}</aside>  
-//Favorite albums 
-//Favorite Artists
-
-<a href="/profileUpdate/{{users.id}}">
-<button>Update User Profile</button>
-</a>
 
 

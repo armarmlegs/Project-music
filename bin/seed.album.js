@@ -84,12 +84,12 @@ const albums = [
     // empty the album db collection
 
     const artists = await Promise.all([
-      ArtistModel.findOne({ name: "foo fighters" }),
-      ArtistModel.findOne({ name: "wu tang clan" }),
-      ArtistModel.findOne({ name: "august burns red" }),
-      ArtistModel.findOne({ name: "queens of the stone age" }),
-      ArtistModel.findOne({ name: "rage against the machine" }),
-      ArtistModel.findOne({ name: "deftones" }),
+      ArtistModel.findOne({ name: "Foo Fighters" }),
+      ArtistModel.findOne({ name: "Wu Tang Clan" }),
+      ArtistModel.findOne({ name: "August Burns Red" }),
+      ArtistModel.findOne({ name: "Queens Of The Stone Age" }),
+      ArtistModel.findOne({ name: "Rage Against The Machine" }),
+      ArtistModel.findOne({ name: "Deftones" }),
     ]);
 
     albums[0].artist = artists[0];
@@ -99,7 +99,7 @@ const albums = [
     albums[4].artist = artists[4];
     albums[5].artist = artists[5];
 
-    console.log("sortie du try ");
+  
 
     const inserted = await AlbumModel.insertMany(albums); // insert docs in db
     console.log(`seed albums done : ${inserted.length} documents inserted !`);

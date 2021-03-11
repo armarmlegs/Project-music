@@ -8,7 +8,7 @@ const protectRoute = require("./../middlewares/thisProtector");
 
 router.get("/", async (req, res, next) => {
     try {
-      res.render("albums", { albums: await AlbumModel.find().populate("artist") });
+      res.render("albums", { albums: await AlbumModel.find().populate("artist label") });
     } catch (err) {
       next(err);
     }
@@ -18,7 +18,7 @@ router.get("/", async (req, res, next) => {
     try {
       res.render(
         "album",
-        await AlbumModel.findById(req.params.id).populate("artist")
+        await AlbumModel.findById(req.params.id).populate("artist label")
       );
     } catch (err) {
       next(err);
