@@ -9,7 +9,8 @@ const albums = [
   {
     title: "Messengers",
     releaseDate: new Date("06/19/2007"),
-    artist: null,
+    
+artist: null,
     cover:
       "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615215216/albums%20covers/august-cover_z3sml5.jpg",
     otherCovers: [
@@ -84,20 +85,20 @@ const albums = [
     // empty the album db collection
 
     const artists = await Promise.all([
-      ArtistModel.findOne({ name: "foo fighters" }),
-      ArtistModel.findOne({ name: "wu tang clan" }),
-      ArtistModel.findOne({ name: "august burns red" }),
-      ArtistModel.findOne({ name: "queens of the stone age" }),
-      ArtistModel.findOne({ name: "rage against the machine" }),
-      ArtistModel.findOne({ name: "deftones" }),
+      ArtistModel.findOne({ name: "Foo Fighters" }),
+      ArtistModel.findOne({ name: "Wu Tang Clan" }),
+      ArtistModel.findOne({ name: "August Burns Red" }),
+      ArtistModel.findOne({ name: "Queens Of The Stone Age" }),
+      ArtistModel.findOne({ name: "Rage Against The Machine" }),
+      ArtistModel.findOne({ name: "Deftones" }),
     ]);
 
-    albums[0].artist = artists[0];
-    albums[1].artist = artists[1];
-    albums[2].artist = artists[2];
-    albums[3].artist = artists[3];
-    albums[4].artist = artists[4];
-    albums[5].artist = artists[5];
+    albums[0].artist = artists[0]
+    albums[1].artist = artists[1]
+    albums[2].artist = artists[2]
+    albums[3].artist = artists[3]
+    albums[4].artist = artists[4]
+    albums[5].artist = artists[5]
 
     console.log("sortie du try ");
 

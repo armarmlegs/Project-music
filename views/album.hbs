@@ -1,11 +1,18 @@
 {{> navbar}}
+
+
+ 
 <div class="album-detail">
 <h1 class="album-detail-title">{{title}}</h1>
 <h2 class="album-detail-desc">
-    {{artist.name}} recorded this album the {{releaseDate}}
+    {{artist.name}} recorded this album the {{formatDate releaseDate}}
 </h2>
 <img class="cover-details" src="{{cover}}" alt="{{title}}'s cover'">
 <p>
     produced by {{label.name}}
 </p>
 </div>
+
+
+
+

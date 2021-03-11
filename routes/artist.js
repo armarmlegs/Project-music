@@ -19,7 +19,7 @@ router.get("/create", protectRoute, async (req, res, next) => {
 });
 
 // GET - UPDATE AVEC UN FORM
-router.get("/update/:id", protectRoute, async (req, res, next) => {
+router.get("/update/:id",  uploader.single("picture"), protectRoute, async (req, res, next) => {
   try {
     res.render(
       "dashboard/artistUpdate",
@@ -43,7 +43,7 @@ router.get("/delete/:id", protectRoute, async (req, res, next) => {
 // POST - CREER UN ARTIST
 router.post(
   "/",
-  uploader.single("logo"),
+  uploader.single("picture"),
   protectRoute,
   async (req, res, next) => {
     const newArtist = { ...req.body };

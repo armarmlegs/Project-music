@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 const userModel = require("./../models/user");
 const uploader = require("./../config/cloudinary");
+const protectRoute = require("./../middlewares/thisProtector");
 
 //User page
 router.get("/profile", async function (req, res, next) {
@@ -16,7 +17,7 @@ router.get("/profile", async function (req, res, next) {
   }
 });
 
-router.get("/profileUpdate/:id", async (req, res, next) => {
+router.get("/profileUpdate/:id", protectRoute,  async (req, res, next) => {
   try {
     res.render("ProfileUpdate", await userModel.findById(req.params.id));
   } catch (err) {
@@ -27,7 +28,7 @@ router.get("/profileUpdate/:id", async (req, res, next) => {
 
 
 
-router.post("/profile/:id", async (req, res, next) => {
+router.post("/profile/:id", protectRoute, async (req, res, next) => {
   console.log("router post")
   try {
     console.log("entree dans le try", req.params.id)
@@ -35,7 +36,7 @@ router.post("/profile/:id", async (req, res, next) => {
     console.log(req.body)
     console.log (userToUpdate)
     const toto = await userModel.findByIdAndUpdate(req.params.id, userToUpdate, {new:true});
-    
+    console.log("totoleretour")
     console.log("----------------",toto)
     res.redirect("/profile");
   } catch (err) { 

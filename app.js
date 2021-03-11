@@ -1,5 +1,6 @@
 require("dotenv").config();
 require("./config/mongodb");
+require("./helpers/hbs")
 
 
 
@@ -12,7 +13,7 @@ const flash = require("connect-flash"); // designed to keep messages between 2 h
 const hbs = require("hbs");
 const session = require("express-session");
 const app = express();
-// const MongoStore = require("connect-mongo")
+const MongoStore = require("connect-mongo");
 // const mongoose = require("mongoose")
 
 
@@ -33,10 +34,13 @@ app.use(express.static(path.join(__dirname, "public")));
 //Init Session
 app.use(
   session({
+    cookie: {
+      maxAge: 24 * 60 * 60 * 1000,
+    },
     secret: process.env.SESS_SECRET,
-    // store: MongoStore.create({
-      // mongooseConnection: mongoose.connection
-    // }),
+     store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URI
+     }),
     saveUninitialized: true,
     resave: true
   })

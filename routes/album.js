@@ -13,7 +13,7 @@ const protectAdmin = require("./../middlewares/protectAdmin")
 // GET - all albums
 router.get("/", protectRoute, async (req, res, next) => {
   try {
-    res.render("dashboard/albums", { albums: await AlbumModel.find().populate("artist label") });
+    res.render("dashboard/albums", { albums: await AlbumModel.find().populate("artist label")});
   } catch (err) {
     next(err);
   }
@@ -24,8 +24,8 @@ router.get("/", protectRoute, async (req, res, next) => {
 
 // GET - create one album (form)
 router.get("/create", protectRoute, async (req, res, next) => {
-  const artists =  await ArtistModel.find();
-  res.render("dashboard/albumCreate", { artists });
+  const artists =  await AlbumModel.find();
+  res.render("dashboard/albumCreate",) //{ artists });
 });
 
 // GET - update one album (form)
