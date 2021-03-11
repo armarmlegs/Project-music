@@ -12,6 +12,8 @@ const flash = require("connect-flash"); // designed to keep messages between 2 h
 const hbs = require("hbs");
 const session = require("express-session");
 const app = express();
+// const MongoStore = require("connect-mongo")
+// const mongoose = require("mongoose")
 
 
 
@@ -23,7 +25,7 @@ hbs.registerPartials(path.join(__dirname, "views/partials")); // where are the t
 
 app.use(logger("dev"));
 app.use(express.json()); // expose asynchronous posted data in req.body
-app.use(express.urlencoded({ extended: false })); // same for synchronous posted data
+app.use(express.urlencoded({ extended: true })); // same for synchronous posted data
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -32,6 +34,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(
   session({
     secret: process.env.SESS_SECRET,
+    // store: MongoStore.create({
+      // mongooseConnection: mongoose.connection
+    // }),
     saveUninitialized: true,
     resave: true
   })
@@ -53,7 +58,7 @@ const albumRouter = require("./routes/album");
 const albumDetsRouter = require ("./routes/albumDets");
 const artistDetsRouter = require ("./routes/artistDetsRouter");
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', usersRouter);
 app.use('/', authRouter);
 app.use("/dashboard/artist", artistRouter);
 app.use("/dashboard/album", albumRouter);

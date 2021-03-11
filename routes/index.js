@@ -19,8 +19,6 @@ router.get('index',async (req, res, next) => {
 //   res.render("dashboard/albumCreate", { artists });
 // });
 
-router.get("/profile",  function (req, res) {
-  res.render("Profile");
-});
+
 
 module.exports = router;
