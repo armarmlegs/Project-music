@@ -65,6 +65,7 @@ router.post("/", uploader.single("cover"), protectRoute,  async (req, res, next)
 router.post("/:id", uploader.single("cover"), protectRoute, async (req, res, next) => {
   try {
     const albumToUpdate = { ...req.body };
+
     if (req.file) albumToUpdate.cover = req.file.path;
 
     await AlbumModel.findByIdAndUpdate(req.params.id, albumToUpdate);

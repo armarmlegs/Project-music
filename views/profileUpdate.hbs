@@ -1,7 +1,7 @@
 {{> navbar}}
 <h2>profile Update page</h2>
 
-<form method="post" action="/profile" class="form" enctype="multipart/form-data">
+<form method="POST" action="/profile/{{_id}}" class="form" enctype="multipart/form-data">
 
     <label for="username" class="label">User Name</label>
     <input class="input" type="text" id="usernamename" name="usernamename" value="{{username}}">
