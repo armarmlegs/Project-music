@@ -1,0 +1,26 @@
+{{> navbar}}
+<h2>profile Update page</h2>
+
+<form method="post" action="/profile" class="form" enctype="multipart/form-data">
+
+    <label for="username" class="label">User Name</label>
+    <input class="input" type="text" id="usernamename" name="usernamename" value="{{username}}">
+
+    <label for="email" class="label">Email</label>
+    <input class="input" type="email" id="email" name="email" value="{{email}}">
+
+    <label for="faveArtist" class="label">Favorite Artists</label>
+    <input class="input" type="text" id="text" name="favesArtist" value="{{favesArtist}}">
+
+       <label for="role" class="label">Roles</label>
+       <select name="role" id="role">
+           <option value="{{role}}">--Please choose a role--</option>
+           <option value="user">user</option>
+           <option value="admin">admin</option>
+       </select>
+   
+
+
+    <button class="btn">update</button>
+
+    </form>
