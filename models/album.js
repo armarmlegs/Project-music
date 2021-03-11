@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const albumSchema = new Schema(
     {
       title: String,
-      releaseDate: Date,
+      releaseDate:Date,
       // label: { type: Schema.Types.ObjectId, ref: "label" }, 
       // // ref is the link to an other collection, here label
       artist: { type: Schema.Types.ObjectId, ref: "artist" }, 
@@ -15,7 +15,6 @@ const albumSchema = new Schema(
         default:
           "",
       },
-   
     },
     { timestamps: true }
    

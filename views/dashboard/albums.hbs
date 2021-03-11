@@ -1,4 +1,3 @@
-
     {{>navbar}}
     <span>All albums</span>
     <a href="/dashboard/album/create" class="link album"><i class="fa fa-plus"></i></a>
@@ -16,18 +15,19 @@
         <th class="cell">update</th>
         <th class="cell">delete</th>
     </thead>
-    <tbody class="body">
+    <tbody class="body-table">
         {{#each albums}}
-        <tr class="row">
-          <td class="cell name">{{title}}</td>
-               <td class="cell name">{{releaseDate}}</td>
-       <td class="cell artist">{{artist.name}}</td>
-            <td class="cell cover" style="background-image: url({{cover}})"></td>
-           <td class="cell update" >   <a href="/dashboard/album/update/{{_id}}">
-                <button>update album</button>
+        <tr class="row2">
+          <td class="cell-name" style=" padding-left: 5%;">{{title}}</td>
+         <td class="cell-date" style=" padding-left:5%;">{{releaseDate}}</td>
+       <td class="cell artist" style=" padding-left: 5%;">{{artist.name}}</td>
+         <td style="padding-left: 2%;"> <img class="cover3" src="{{cover}}"></td>
+           <td class="cell update" style=" padding-left: 2%;"><a href="/dashboard/album/update/{{_id}}">
+                <button class="big-button">update album</button>
                 </a>
   </td>
-            <td class="cell delete">    <a href="/dashboard/album/delete/{{_id}}">  <button>delete album</button> </a>   
+            <td class="cell delete" style=" padding-left: 2%;"><a href="/dashboard/album/delete/{{_id}}"> 
+            <button class="big-button">delete album</button> </a>   
             </td>
         </tr>
         {{/each}}

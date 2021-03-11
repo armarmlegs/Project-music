@@ -1,12 +1,13 @@
 {{> navbar}}
 <h1 class="all-album"> <br> &ensp; &ensp; All artists  <br> </h1>
-
-<div class="cards">
+ <div class="card">
     {{#each artists}}
-    <div class="card artist" style="background-image: url({{picture}}">
-        <a href="/artists/artists/{{this._id}}">
-            {{this.name}}
+    <div class="every">
+   <img class="cover2" src="{{picture}}"> &ensp; 
+        <a class="lol"  href="/artists/artists/{{this._id}}"><br>
+           &ensp;    {{this.name}}<br>
         </a>
+         <br>
     </div>
     {{/each}}
 </div>

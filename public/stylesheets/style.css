@@ -401,3 +401,116 @@ margin-bottom: 50px;
 background-color: #d6c396;
 border: 1px solid black;
 }
+
+.login2{
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+}
+
+
+
+
+/* .card-artist {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 2px solid black;
+  background-color:#d6c396 ;
+} */
+
+/* .cover2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  
+} */
+
+:root {
+  /* --backgroundColor:#ede5d2; */
+  --colorShadeA: #cab278;
+  --colorShadeB: #d0bb87 ;
+  --colorShadeC: #d6c396;
+  --colorShadeD: #dccca5;
+  --colorShadeE: #f9f6f0
+  ;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+button.big-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1.5rem;
+    color: black;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: inherit;
+   padding: 1em 2em;
+   border: 2px solid var(--colorShadeA);
+  border-radius: 1em;
+  background: var(--colorShadeE);
+transform-style: preserve-3d;
+   transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+button.big-button::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+    box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+ transform: translate3d(0, 0.75em, -1em);
+     transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+
+button.big-button:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.375em);
+}
+
+button.big-button:hover::before {
+  transform: translate3d(0, 0.75em, -1em);
+}
+
+button.big-button:active {
+            transform: translate(0em, 0.75em);
+}
+
+button.big-button:active::before {
+  transform: translate3d(0, 0, -1em);
+  
+      box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+
+}
+.cover3{
+  width: 150px;
+  border: 1px solid black;;
+  box-shadow: 10px 5px 5px #d6c396;
+}
+
+.row2 {
+  text-transform: uppercase;
+}
