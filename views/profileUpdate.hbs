@@ -1,16 +1,16 @@
 {{> navbar}}
 <h2>profile Update page</h2>
 
-<form method="post" action="/profile" class="form" enctype="multipart/form-data">
+<form method="POST" action="/profile/{{_id}}" class="form">
 
     <label for="username" class="label">User Name</label>
-    <input class="input" type="text" id="usernamename" name="usernamename" value="{{username}}">
+    <input class="input" type="text" id="username" name="username" value="{{username}}">
 
     <label for="email" class="label">Email</label>
     <input class="input" type="email" id="email" name="email" value="{{email}}">
 
-    <label for="faveArtist" class="label">Favorite Artists</label>
-    <input class="input" type="text" id="text" name="favesArtist" value="{{favesArtist}}">
+    {{!-- <label for="faveArtist" class="label">Favorite Artists</label>
+    <input class="input" type="text" id="text" name="favesArtist" value="{{favesArtist}}"> --}}
 
        <label for="role" class="label">Roles</label>
        <select name="role" id="role">

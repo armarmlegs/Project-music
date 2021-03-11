@@ -25,7 +25,7 @@ hbs.registerPartials(path.join(__dirname, "views/partials")); // where are the t
 
 app.use(logger("dev"));
 app.use(express.json()); // expose asynchronous posted data in req.body
-app.use(express.urlencoded({ extended: false })); // same for synchronous posted data
+app.use(express.urlencoded({ extended: true })); // same for synchronous posted data
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
