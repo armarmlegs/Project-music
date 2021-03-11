@@ -12,6 +12,8 @@ const flash = require("connect-flash"); // designed to keep messages between 2 h
 const hbs = require("hbs");
 const session = require("express-session");
 const app = express();
+// const MongoStore = require("connect-mongo")
+// const mongoose = require("mongoose")
 
 
 
@@ -32,6 +34,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(
   session({
     secret: process.env.SESS_SECRET,
+    // store: MongoStore.create({
+      // mongooseConnection: mongoose.connection
+    // }),
     saveUninitialized: true,
     resave: true
   })
@@ -52,7 +57,6 @@ const artistRouter = require("./routes/artist");
 const albumRouter = require("./routes/album");
 const albumDetsRouter = require ("./routes/albumDets");
 const artistDetsRouter = require ("./routes/artistDetsRouter");
-
 app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/', authRouter);

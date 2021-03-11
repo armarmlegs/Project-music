@@ -24,7 +24,9 @@ router.get("/profileUpdate/:id", async (req, res, next) => {
   }
 });
 
-//localhost:3000/
+
+
+
 router.post("/profile/:id", async (req, res, next) => {
   console.log("router post")
   try {
@@ -32,12 +34,18 @@ router.post("/profile/:id", async (req, res, next) => {
     const userToUpdate =  { ...req.body };
     console.log(req.body)
     console.log (userToUpdate)
-    await userModel.findByIdAndUpdate(req.params.id, userToUpdate);
+    const toto = await userModel.findByIdAndUpdate(req.params.id, userToUpdate, {new:true});
+    
+    console.log("----------------",toto)
     res.redirect("/profile");
   } catch (err) { 
     console.log(err)
     next(err);
   }
 });
+
+
+
+
 
 module.exports = router;
