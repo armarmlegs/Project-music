@@ -10,10 +10,10 @@ const artists = [
         name: "Solid-State",
         city: "Seattle",
         country: "usa",
-        logo: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214221/logos/solidstate_yldmlj.jpg"
+        // logo: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214221/logos/solidstate_yldmlj.jpg"
       
     },
-    band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299690/pictures%20%28bands%29/august-picture_bkftwh.jpg",
+    picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299690/pictures%20%28bands%29/august-picture_bkftwh.jpg",
 },
   {
     name: "Wu Tang Clan",
@@ -22,9 +22,9 @@ const artists = [
         name: "Loud",
         city: "santa-monica",
         country: "usa",
-        picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214353/logos/loud-records_z5so7s.jpg",
+        //logo: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214353/logos/loud-records_z5so7s.jpg",
   },
-  band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299772/pictures%20%28bands%29/wutang-picture_bacqax.jpg",
+  picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299772/pictures%20%28bands%29/wutang-picture_bacqax.jpg",
 },
   {
     name: "Foo Fighters",
@@ -33,9 +33,9 @@ const artists = [
         name: "Rca",
         city: "new_york",
         country: "usa",
-        picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214569/logos/rca-logo_l9ljcf.png",
+        //logo: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214569/logos/rca-logo_l9ljcf.png",
   },
-  band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299705/pictures%20%28bands%29/foofighters-picture_otjvd1.jpg",
+  picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299705/pictures%20%28bands%29/foofighters-picture_otjvd1.jpg",
 },
   {
     name: "Queens Of The Stone Age",
@@ -44,9 +44,9 @@ const artists = [
         name: "matador-records",
         city: "london",
         country: "uk",
-        picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214687/logos/matador-logo_rc0ge7.jpg",
+        //logo: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214687/logos/matador-logo_rc0ge7.jpg",
   },
-  band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299741/pictures%20%28bands%29/qotsa-picture_wzz7ma.jpg",
+  picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299741/pictures%20%28bands%29/qotsa-picture_wzz7ma.jpg",
 },
   {
     name: "Rage Against The Machine",
@@ -55,9 +55,9 @@ const artists = [
         name: "Epic-records",
         city: "new_york",
         country: "usa",
-        picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214773/logos/epic-logo_y8lcbt.png",
+        //logo: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615214773/logos/epic-logo_y8lcbt.png",
   },
-  band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299725/pictures%20%28bands%29/rage-picture_ewnyya.jpg",
+  picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299725/pictures%20%28bands%29/rage-picture_ewnyya.jpg",
 },
   {
     name: "Deftones",
@@ -66,9 +66,9 @@ const artists = [
       name: "Warner",
       city: "new_york",
       country: "usa",
-      picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615221861/logos/warner-logo_jpi7c2.png"
+      //logo: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615221861/logos/warner-logo_jpi7c2.png"
 },
-band: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299808/pictures%20%28bands%29/deftones-picture_o1r0gn.webp",
+picture: "https://res.cloudinary.com/dp9nyuimq/image/upload/v1615299808/pictures%20%28bands%29/deftones-picture_o1r0gn.webp",
   },
 ];
 

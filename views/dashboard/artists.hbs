@@ -9,20 +9,20 @@
 {{else}}
 <table class="table">
     <thead class="head">
+        <th class="cell">Picture</th>
         <th class="cell">Name</th>
         <th class="cell">Description</th>
         <th class="cell">Label</th>
-        <th class="cell"> Picture</th>
          <th class="cell"> Update</th>
           <th class="cell"> Delete</th>
     </thead>
     <tbody class="body">
       {{#each artists}}
       <tr class="row"> 
+          <td class="cell picture" style="background-image: url({{picture}})"></td>
           <td class="cell name">{{name}}</td>
           <td class="cell description">{{description}}</td>
           <td class="cell label">{{label.name}}-{{label.city}}</td>
-          <td class="cell picture" style="background-image: url({{picture}})"></td>
           <td class="cell update"> 
               <a href="/dashboard/artist/update/{{_id}}">
               <button>update</button></a>
