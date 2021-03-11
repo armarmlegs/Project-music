@@ -23,13 +23,13 @@ router.get("/", protectRoute, async (req, res, next) => {
 
 
 // GET - create one album (form)
-router.get("/create", async (req, res, next) => {
+router.get("/create", protectRoute, async (req, res, next) => {
   const artists =  await ArtistModel.find();
   res.render("dashboard/albumCreate", { artists });
 });
 
 // GET - update one album (form)
-router.get("/update/:id", async (req, res, next) => {
+router.get("/update/:id", protectRoute,  async (req, res, next) => {
   try {
     res.render("dashboard/albumUpdate", await AlbumModel.findById(req.params.id));
   } catch (err) {
@@ -38,7 +38,7 @@ router.get("/update/:id", async (req, res, next) => {
 });
 
 // GET - delete one album
-router.get("/delete/:id", async (req, res, next) => {
+router.get("/delete/:id", protectRoute,  async (req, res, next) => {
   try {
     await AlbumModel.findByIdAndRemove(req.params.id);
     res.redirect("/dashboard/album");
@@ -48,7 +48,7 @@ router.get("/delete/:id", async (req, res, next) => {
 });
 
 // POST - create one album
-router.post("/", uploader.single("cover"), async (req, res, next) => {
+router.post("/", uploader.single("cover"), protectRoute,  async (req, res, next) => {
   const newAlbum = { ...req.body };
   if (!req.file) newAlbum.cover = undefined;
   else newAlbum.cover = req.file.path;
@@ -62,7 +62,7 @@ router.post("/", uploader.single("cover"), async (req, res, next) => {
 });
 
 // POST - update one album
-router.post("/:id", uploader.single("cover"), async (req, res, next) => {
+router.post("/:id", uploader.single("cover"), protectRoute, async (req, res, next) => {
   try {
     const albumToUpdate = { ...req.body };
     if (req.file) albumToUpdate.cover = req.file.path;

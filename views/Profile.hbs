@@ -1,13 +1,25 @@
+
+
 {{> navbar}}
 
+
 <ul>
-    <li> <img class="icon-profil" src="/images/id-card.png"/> &ensp; USERNAME : {{currentUser.username}}</li>
-    <br>
-     <br>
-    <li><img class="icon-profil" src="/images/email.png"/> &ensp; EMAIL : {{currentUser.email}}</li>
-    <br>
-      <br>
-    <li><img class="icon-profil" src="/images/hat.png"/> &ensp; ROLE : {{currentUser.role}} </li>
-    <br>
-      {{!-- <li>FAV ARTIST: {{currentUser.favesArtist}} </li> --}}
+  <li> <img class="icon-profil" src="/images/id-card.png" /> &ensp; USERNAME : {{currentUser.username}}</li>
+  <br>
+  <br>
+  <li><img class="icon-profil" src="/images/email.png" /> &ensp; EMAIL : {{currentUser.email}}</li>
+  <br>
+  <br>
+  <li><img class="icon-profil" src="/images/hat.png" /> &ensp; ROLE : {{currentUser.role}} </li>
+  <br>
+
 </ul>
+<aside>welcome to your very own, personnal profile {{currentUser.username}}</aside>  
+//Favorite albums 
+//Favorite Artists
+
+<a href="/profileUpdate/{{users.id}}">
+<button>Update User Profile</button>
+</a>
+
+
