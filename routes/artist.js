@@ -7,7 +7,7 @@ const userModel = require("./../models/user");
 // GET - Trouver les artists
 router.get("/", protectRoute, async (req, res, next) => {
   try {
-    res.render("dashboard/artists", { artists: await ArtistModel.find() });
+    res.render("dashboard/artists", { artists: await ArtistModel.find()});
   } catch (err) {
     next(err);
   }

@@ -21,8 +21,8 @@ router.get("/", protectRoute, async (req, res, next) => {
 
 // GET - create one album (form)
 router.get("/create", protectRoute, async (req, res, next) => {
-  const artists =  await AlbumModel.find();
-  res.render("dashboard/albumCreate",) //{ artists });
+  const artists =  await AlbumModel.find().populate("artist label");
+  res.render("dashboard/albumCreate", { artists });
 });
 
 // GET - update one album (form)
@@ -65,7 +65,7 @@ router.post("/:id", uploader.single("cover"), protectRoute, async (req, res, nex
 
     if (req.file) albumToUpdate.cover = req.file.path;
 
-    await AlbumModel.findByIdAndUpdate(req.params.id, albumToUpdate);
+    await AlbumModel.findByIdAndUpdate(req.params.id, albumToUpdate).populate("artist label");
     res.redirect("/dashboard/album");
   } catch (err) {
     next(err);

@@ -9,18 +9,14 @@
       <label for="Date" class="label">ReleaseDate</label>
     <input class="input" type="text" id="name" name="label" value="2020-12-10">
 
-   <label for="select-artist">artist</label>
-    <select id="select-artist" name="artist" class="input">
-        {{#each artists}}
-        <option value="{{this._id}}">{{this.name}}</option>
-        {{/each}}
-    </select>
+   <label for="artist" class="label">artist</label>
+    <input class="input" type="text" id="artist" name="artist   " value="funkmaster jay">
 
-    <label for="picture" class="label">
+    <label for="cover" class="label">
        Cover
         <i class="icon fas fa-cloud-upload-alt fa-2x"></i>
     </label>
-    <input class="is-hidden" type="file" id="picture" name="picture">
+    <input class="is-hidden" type="file" id="cover" name="cover">
 
     <button class="btn">create</button>
 </form>
