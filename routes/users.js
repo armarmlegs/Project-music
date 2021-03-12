@@ -19,7 +19,7 @@ router.get("/profile", async function (req, res, next) {
 
 router.get("/profileUpdate/:id", protectRoute,  async (req, res, next) => {
   try {
-    res.render("ProfileUpdate", await userModel.findById(req.params.id));
+    res.render("profileUpdate", await userModel.findById(req.params.id));
   } catch (err) {
     next(err);
   }
