@@ -9,10 +9,7 @@ const albumSchema = new Schema(
       // // ref is the link to an other collection, here label
       artist: { type: Schema.Types.ObjectId, ref: "artist" }, 
       // ref is the link to an other collection, here artist
-      cover: {
-        default:
-          "",
-      },
+      cover: String,
     },
   
   { timestamps: true }

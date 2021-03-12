@@ -3,7 +3,7 @@
     <div class="card">
     {{#each albums}}
     <div class="every">
-<img class="cover2" src="{{cover}}">
+<img class="cover2" src="{{this.cover}}">
         <a class="lol" href="/albums/albums/{{this._id}}"><br>
            &ensp;  {{this.title}}<br>
         </a>
